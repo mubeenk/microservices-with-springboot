@@ -20,6 +20,10 @@ public class GreetingController {
 	@Lazy
 	private EurekaClient eurekaClient;
 	
+	private void foo() {
+		// comment
+	}
+	
 	@RequestMapping("/greeting")
 	public String greeting() {
 		return String.format("Hello from %s !",eurekaClient.getApplication(appName).getName());
